@@ -1,5 +1,5 @@
 const clone = require('clone')
-const posts = require('./posts')
+const posts = require("./posts");
 
 let db = {}
 
