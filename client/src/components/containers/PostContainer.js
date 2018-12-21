@@ -53,7 +53,7 @@ class PostContainer extends Component {
         <Navbar />
         <Layout>
           <Layout.Header style={styles.layoutHeader}>
-            <Breadcrumb category={category} style={{marginTop:"20px;"}} />
+            <Breadcrumb category={category} />
             <Link to="/new">
               <button
                 className="btn btn-primary"
@@ -92,6 +92,7 @@ const styles = {
     justifyContent: "space-between",
     marginLeft: 20,
     marginRight: 20,
+    marginTop: 20,
     padding: 20,
     backgroundColor: "#fff",
     lineHeight: "12px"
