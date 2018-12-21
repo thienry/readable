@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import { Link, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
-import { Layout, Icon, Button } from "antd";
+import { Layout, Icon } from "antd";
 import { fetchPost, deletePost } from "../../actions/posts";
 import { fetchComments } from "../../actions/comments";
 import Sidebar from "../layout/Sidebar";
 import PostDetail from "../commom/PostDetail";
+import Footer from "../layout/Footer";
 
 class PostDetailContainer extends Component {
   state = {
@@ -48,25 +49,25 @@ class PostDetailContainer extends Component {
             </Link>
             <span>
               <Link to={{ pathname: "/edit", state: { post } }}>
-                <Button icon="edit" size="small" style={styles.btn}>
+                <button icon="edit" className="btn btn-sm btn-primary" style={styles.btn} >
                   Edit
-                </Button>
+                </button>
               </Link>
-              <Button
-                type="danger"
+              <button
                 icon="delete"
-                size="small"
+                className="btn btn-sm btn-secondary"
                 style={styles.btn}
                 onClick={() => this.handleDelete(post)}
                 ghost
               >
                 Delete
-              </Button>
+              </button>
             </span>
           </Layout.Header>
           <Layout.Content style={styles.layoutContent}>
             {post && <PostDetail post={post} comments={comments} />}
           </Layout.Content>
+          <Footer />
         </Layout>
       </Layout>
     );

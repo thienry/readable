@@ -47,3 +47,18 @@ hr {
   font-weight: 600;
   color: #666;
 }
+
+footer.footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 50px;
+    padding-bottom: 30px;
+    background-color: aliceblue;
+    box-shadow: var(--shadow);
+    
+}
+
+footer.footer a {
+    text-decoration: none;
+}

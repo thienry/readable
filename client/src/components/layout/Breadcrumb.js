@@ -1,21 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Breadcrumb as AntBreadcrumb } from "antd";
 import { capitalize } from "../../utils/helpers";
 
 const Breadcrumb = ({ category }) => (
-  <AntBreadcrumb>
-    <AntBreadcrumb.Item>
-      <Link to="/">Home</Link>
-    </AntBreadcrumb.Item>
-    <AntBreadcrumb.Item>
-      {category && category.includes("Post") ? (
-        category
-      ) : (
-        <Link to={`/${category}`}>{category && capitalize(category)}</Link>
-      )}
-    </AntBreadcrumb.Item>
-  </AntBreadcrumb>
+  <nav aria-label="breadcrumb">
+    <ol className="breadcrumb">
+      <li className="breadcrumb-item">
+        <Link to="/">Home</Link>
+      </li>
+      <li className="breadcrumb-item active" aria-current="page">
+        {category && category.includes("Post") ? (
+          category
+        ) : (
+          <Link to={`/${category}`}>{category && capitalize(category)}</Link>
+        )}
+      </li>
+    </ol>
+  </nav>
 );
 
 export default Breadcrumb;

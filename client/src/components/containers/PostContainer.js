@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { Layout, Row, Col, Button } from "antd";
+import { Layout, Row, Col } from "antd";
 import { fetchPosts, deletePost } from "../../actions/posts";
 import Sidebar from "../layout/Sidebar";
 import SortBy from "../commom/SortBy";
 import Breadcrumb from "../layout/Breadcrumb";
 import PostList from "../commom/PostList";
 import NoPosts from "../pages/NoPosts";
+import Footer from "../layout/Footer";
 
 class PostContainer extends Component {
   state = {
@@ -54,9 +55,15 @@ class PostContainer extends Component {
           <Layout.Header style={styles.layoutHeader}>
             <Breadcrumb category={category} />
             <Link to="/new">
-              <Button type="primary" icon="plus" size="small">
-                Add New Post
-              </Button>
+              <button
+                className="btn btn-primary"
+                type="primary"
+                icon="plus"
+                size="small"
+              >
+                {" "}
+                New Post{" "}
+              </button>
             </Link>
           </Layout.Header>
           <Layout.Content style={styles.layoutContent}>
@@ -70,6 +77,7 @@ class PostContainer extends Component {
             </Row>
             {this.renderPosts(posts, category)}
           </Layout.Content>
+          <Footer />
         </Layout>
       </Layout>
     );

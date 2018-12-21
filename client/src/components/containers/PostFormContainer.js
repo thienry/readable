@@ -2,12 +2,13 @@ import uuid from "uuid";
 import React, { Component } from "react";
 import { Link, Redirect, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
-import { Layout, Row, Col, Form, Input, Button, Select } from "antd";
+import { Layout, Row, Col, Form, Input, Select } from "antd";
 import { fetchCategories } from "../../actions/categories";
 import { addPost, editPost } from "../../actions/posts";
 import { capitalize } from "../../utils/helpers";
 import Sidebar from "../layout/Sidebar";
 import Breadcrumb from "../layout/Breadcrumb";
+import Footer from "../layout/Footer";
 
 class PostFormContainer extends Component {
   constructor(props) {
@@ -127,19 +128,20 @@ class PostFormContainer extends Component {
                 />
               </Form.Item>
               <Form.Item>
-                <Button
-                  type="primary"
+                <button
+                  className="btn btn-primary"
                   style={styles.button}
                   onClick={this.handleSubmit}
                 >
                   {this.state.editMode ? "Save" : "Publish"}
-                </Button>
+                </button>
                 <Link to="/">
-                  <Button style={styles.button}>Cancel</Button>
+                  <button className="btn btn-secondary" style={styles.button}>Cancel</button>
                 </Link>
               </Form.Item>
             </Form>
           </Layout.Content>
+          <Footer />
         </Layout>
       </Layout>
     );

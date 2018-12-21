@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
-import { Row, Col, List, Button, Input } from "antd";
+import { Row, Col, List, Input } from "antd";
 import { addComment } from "../../actions/comments";
 import { sortByDate, sortByVotes } from "../../utils/helpers";
 import Comment from "../commom/Comment";
@@ -56,14 +56,13 @@ class CommentsContainer extends Component {
           />
           <Row type="flex" align="middle" justify="space-between">
             <Col>
-              <Button
-                type="primary"
-                size="small"
+              <button
+                className="btn btn-primary"
                 style={styles.postCommentBtn}
                 onClick={this.postComment}
               >
                 Post
-              </Button>
+              </button>
             </Col>
             <Col>
               Supports{" "}
@@ -101,7 +100,7 @@ class CommentsContainer extends Component {
 
 const styles = {
   container: {
-    padding: 20,
+    padding: 50,
     background: "#fff"
   },
   addCommentContainer: {

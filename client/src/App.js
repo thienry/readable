@@ -8,6 +8,8 @@ import PostFormContainer from "./components/containers/PostFormContainer";
 import PostDetailContainer from "./components/containers/PostDetailContainer";
 import NotFound from "./components/pages/NotFound";
 
+import "bootstrap/dist/css/bootstrap.min.css"
+
 class App extends Component {
 
   render() {

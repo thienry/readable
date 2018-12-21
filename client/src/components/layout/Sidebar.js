@@ -20,9 +20,6 @@ class Sidebar extends Component {
           </Link>
         </Layout.Header>
         <Menu theme="dark" defaultSelectedKeys={["1"]} mode="inline">
-          <Menu.Item key="1">
-            <Link to="/">All</Link>
-          </Menu.Item>
           {categories.length > 0 &&
             categories.map((category, key) => (
               <Menu.Item key={key + 2}>

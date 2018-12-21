@@ -51,21 +51,20 @@ class Comment extends Component {
           />
           <Row type="flex" align="middle" justify="space-between">
             <Col>
-              <Button
-                type="primary"
-                size="small"
+              <button
+                className="btn btn-sm btn-primary"
                 style={styles.postCommentBtn}
                 onClick={() => this.saveComment(comment)}
               >
                 Save
-              </Button>
-              <Button
-                size="small"
+              </button>
+              <button
+                className="btn btn-sm btn-secondary"
                 style={styles.postCommentBtn}
                 onClick={this.handleEditComment}
               >
                 Cancel
-              </Button>
+              </button>
             </Col>
             <Col>
               Supports{" "}
