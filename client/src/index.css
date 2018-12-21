@@ -1,10 +1,13 @@
 @import "~antd/dist/antd.css";
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
-
-* {
-  font-family: 'Open Sans', sans-serif;
+@font-face {
+    font-family: 'Roboto';
+    src: url('./fonts/Roboto-Regular.ttf')
 }
-
+              
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', monospace;
+}
 body {
   margin: 0;
   padding: 0;
@@ -17,36 +20,13 @@ hr {
   color: #e2e2e2;
 }
 
-/* Override list item styles */
-.ant-list-vertical .ant-list-item-meta,
-.ant-list-vertical .ant-list-item-meta-title {
-  margin-bottom: 0;
-}
 
-.ant-list-vertical .ant-list-item-action {
-  margin-top: 3px;
-  margin-left: 3px;
-}
 
-.ant-list-vertical .ant-list-item-meta-title {
-  font-size: 18px;
-}
 
-.ant-list-vertical .ant-list-item-meta-description {
-  font-size: 14px;
-  margin-top: 8px;
-  margin-bottom: 8px;
-}
 
-.ant-form-item {
-  margin-bottom: 28px;
-}
-
-.ant-form-item-label label {
-  font-size: 18px;
-  font-weight: 600;
-  color: #666;
-}
+/*
+  FOOTER
+*/
 
 footer.footer {
     display: flex;

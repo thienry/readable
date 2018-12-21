@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { Layout, Row, Col } from "antd";
 import { fetchPosts, deletePost } from "../../actions/posts";
-import Sidebar from "../layout/Sidebar";
+import Navbar from "../layout/Navbar";
 import SortBy from "../commom/SortBy";
 import Breadcrumb from "../layout/Breadcrumb";
 import PostList from "../commom/PostList";
@@ -50,7 +50,7 @@ class PostContainer extends Component {
     const category = match.params.category;
     return (
       <Layout style={{ minHeight: "100vh" }}>
-        <Sidebar />
+        <Navbar />
         <Layout>
           <Layout.Header style={styles.layoutHeader}>
             <Breadcrumb category={category} />

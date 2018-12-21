@@ -6,7 +6,7 @@ import { Layout, Row, Col, Form, Input, Select } from "antd";
 import { fetchCategories } from "../../actions/categories";
 import { addPost, editPost } from "../../actions/posts";
 import { capitalize } from "../../utils/helpers";
-import Sidebar from "../layout/Sidebar";
+import Navbar from "../layout/Navbar";
 import Breadcrumb from "../layout/Breadcrumb";
 import Footer from "../layout/Footer";
 
@@ -85,7 +85,7 @@ class PostFormContainer extends Component {
 
     return (
       <Layout style={{ minHeight: "100vh" }}>
-        <Sidebar />
+        <Navbar />
         <Layout>
           <Layout.Header style={styles.layoutHeader}>
             <Breadcrumb

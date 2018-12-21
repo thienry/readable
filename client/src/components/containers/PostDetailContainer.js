@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { Layout, Icon } from "antd";
 import { fetchPost, deletePost } from "../../actions/posts";
 import { fetchComments } from "../../actions/comments";
-import Sidebar from "../layout/Sidebar";
+import Navbar from "../layout/Navbar";
 import PostDetail from "../commom/PostDetail";
 import Footer from "../layout/Footer";
 
@@ -40,7 +40,7 @@ class PostDetailContainer extends Component {
 
     return (
       <Layout style={styles.layout}>
-        <Sidebar />
+        <Navbar />
         <Layout>
           <Layout.Header style={styles.layoutHeader}>
             <Link to="/">
