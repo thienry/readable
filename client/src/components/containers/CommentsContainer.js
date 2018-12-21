@@ -100,7 +100,7 @@ class CommentsContainer extends Component {
 
 const styles = {
   container: {
-    padding: 50,
+    padding: 20,
     background: "#fff"
   },
   addCommentContainer: {

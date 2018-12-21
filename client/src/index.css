@@ -20,10 +20,6 @@ hr {
   color: #e2e2e2;
 }
 
-
-
-
-
 /*
   FOOTER
 */
@@ -34,6 +30,7 @@ footer.footer {
     justify-content: flex-end;
     padding: 0 50px;
     padding-bottom: 30px;
+    padding-top: 30px;
     background-color: aliceblue;
     box-shadow: var(--shadow);
     

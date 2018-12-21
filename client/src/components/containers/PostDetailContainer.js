@@ -38,8 +38,7 @@ class PostDetailContainer extends Component {
       return <Redirect to="/" />;
     }
 
-    return (
-      <Layout style={styles.layout}>
+    return <Layout style={styles.layout}>
         <Navbar />
         <Layout>
           <Layout.Header style={styles.layoutHeader}>
@@ -49,17 +48,11 @@ class PostDetailContainer extends Component {
             </Link>
             <span>
               <Link to={{ pathname: "/edit", state: { post } }}>
-                <button icon="edit" className="btn btn-sm btn-primary" style={styles.btn} >
+                <button icon="edit" className="btn btn-sm btn-primary" style={styles.btn}>
                   Edit
                 </button>
               </Link>
-              <button
-                icon="delete"
-                className="btn btn-sm btn-secondary"
-                style={styles.btn}
-                onClick={() => this.handleDelete(post)}
-                ghost
-              >
+              <button icon="delete" className="btn btn-sm btn-secondary" style={styles.btn} onClick={() => this.handleDelete(post)} >
                 Delete
               </button>
             </span>
@@ -69,8 +62,7 @@ class PostDetailContainer extends Component {
           </Layout.Content>
           <Footer />
         </Layout>
-      </Layout>
-    );
+      </Layout>;
   }
 }
 

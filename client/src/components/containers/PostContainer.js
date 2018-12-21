@@ -53,7 +53,7 @@ class PostContainer extends Component {
         <Navbar />
         <Layout>
           <Layout.Header style={styles.layoutHeader}>
-            <Breadcrumb category={category} />
+            <Breadcrumb category={category} style={{marginTop:"20px;"}} />
             <Link to="/new">
               <button
                 className="btn btn-primary"
