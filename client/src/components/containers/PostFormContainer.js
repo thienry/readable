@@ -64,9 +64,10 @@ class PostFormContainer extends Component {
   renderLabel = () => {
     return (
       <Row type="flex" align="bottom" justify="space-between">
-        <Col>Tell us what's up...</Col>
+        <Col>Tell us what's going on </Col>
         <Col style={styles.subtext}>
-          Supports{" "}
+          {" "}
+          Supports
           <Link to="https://github.github.com/gfm/" target="_blank">
             Github Flavored Markdown
           </Link>
@@ -136,7 +137,9 @@ class PostFormContainer extends Component {
                   {this.state.editMode ? "Save" : "Publish"}
                 </button>
                 <Link to="/">
-                  <button className="btn btn-secondary" style={styles.button}>Cancel</button>
+                  <button className="btn btn-secondary" style={styles.button}>
+                    Cancel
+                  </button>
                 </Link>
               </Form.Item>
             </Form>
@@ -156,6 +159,7 @@ const styles = {
     justifyContent: "space-between",
     marginLeft: 20,
     marginRight: 20,
+    marginTop: 20,
     padding: 20,
     backgroundColor: "#fff",
     lineHeight: "12px"
@@ -164,7 +168,6 @@ const styles = {
     margin: 20
   },
   form: {
-    // maxWidth: 500,
     marginTop: 20,
     paddingLeft: 5
   },

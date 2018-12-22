@@ -77,6 +77,7 @@ const styles = {
     justifyContent: "space-between",
     marginLeft: 20,
     marginRight: 20,
+    marginTop: 20,
     padding: 20,
     backgroundColor: "#fff",
     lineHeight: "12px"
