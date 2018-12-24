@@ -8,10 +8,9 @@ import PostFormContainer from "./components/containers/PostFormContainer";
 import PostDetailContainer from "./components/containers/PostDetailContainer";
 import NotFound from "./components/pages/NotFound";
 
-import "bootstrap/dist/css/bootstrap.min.css"
+import "bootstrap/dist/css/bootstrap.min.css";
 
 class App extends Component {
-
   render() {
     return (
       <Provider store={store}>
@@ -19,7 +18,6 @@ class App extends Component {
           <div className="App">
             <Switch>
               <Route exact path="/oops" component={NotFound} />
-              <Route exact path="/" component={PostContainer} />
               <Route exact path="/new" component={PostFormContainer} />
               <Route exact path="/edit" component={PostFormContainer} />
               <Route exact path="/:category" component={PostContainer} />
@@ -28,6 +26,7 @@ class App extends Component {
                 path="/:category/:id"
                 component={PostDetailContainer}
               />
+              <Route exact path="/" component={PostContainer} />
             </Switch>
           </div>
         </Router>

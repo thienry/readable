@@ -30,7 +30,7 @@ class PostDetailContainer extends Component {
   render() {
     const { post, comments } = this.props;
 
-    if (Object.keys(post).length === 0) {
+    if (Object.keys(post).length === 1) {
       return <Redirect to="/oops" />;
     }
 
