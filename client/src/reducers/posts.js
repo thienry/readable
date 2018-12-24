@@ -2,7 +2,7 @@ import { RECEIVE_POSTS, RECEIVE_POST } from "../actions/types";
 
 const initalState = {
   posts: [],
-  post: {}
+  post: undefined
 }
 
 const posts = (state = initalState, action) => {
